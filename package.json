@@ -1,0 +1,40 @@
+{
+  "name": "learn-latvian",
+  "productName": "Learn Latvian",
+  "version": "1.0.0",
+  "description": "Learn Latvian \u2014 desktop chatbot with voice input/output",
+  "main": "main.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron": "electron .",
+    "dist": "electron-builder --mac --x64"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "electron": "^26.2.0",
+    "electron-builder": "^24.6.0"
+  },
+  "build": {
+    "appId": "com.learnlatvian.app",
+    "productName": "Learn Latvian",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.education"
+    },
+    "files": [
+      "build/**/*",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "icon": "build-icons/icon.icns"
+  }
+}
